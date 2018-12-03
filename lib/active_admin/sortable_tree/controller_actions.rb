@@ -33,7 +33,7 @@ module ActiveAdmin::SortableTree
         errors = []
         ActiveRecord::Base.transaction do
           records.each_with_index do |(record, parent_record), position|
-            record.send "#{options[:sorting_attribute]}=", position
+            #record.send "#{options[:sorting_attribute]}=", position
             if options[:tree]
               record.send "#{options[:parent_method]}=", parent_record
             end
